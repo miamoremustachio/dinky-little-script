@@ -1,0 +1,13 @@
+{
+	"dnf": [
+		"dconf-editor",
+		"git",
+		"gnome-themes-extra",
+		"gparted",
+		"micro",
+		"stow",
+		"tldr",
+		"vlc",
+		"vlc-plugins-extra"
+	]
+}
