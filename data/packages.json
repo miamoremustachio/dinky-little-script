@@ -1,5 +1,5 @@
 {
-	"dnf": [
+	"rpm": [
 		"dconf-editor",
 		"git",
 		"gnome-themes-extra",
