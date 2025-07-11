@@ -3,8 +3,6 @@
 source $PROJECT_ROOT/lib/strings.sh
 
 check_packages() {
-  packages_file="$PROJECT_ROOT/data/packages.json"
-
   if [[ ! -f "$packages_file" ]]; then
     echo >&2 "🌹 '$packages_file': file not found."
     echo -e "$cancellation"

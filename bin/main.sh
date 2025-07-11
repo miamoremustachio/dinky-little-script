@@ -18,27 +18,7 @@ resolve_symlinks() {
 
 resolve_symlinks
 
+source $PROJECT_ROOT/lib/menu.sh
 source $PROJECT_ROOT/lib/rpms.sh
-source $PROJECT_ROOT/lib/strings.sh
-source $PROJECT_ROOT/lib/validation.sh
 
-check_packages
-
-echo "Choose an option:"
-options=(
-  "Install RPM packages"
-  "Install Flatpaks"
-  # "Enable RPM Fusion"
-  # "Install multimedia codecs"
-  "Quit"
-)
-
-select opt in "${options[@]}"
-do
-  case $REPLY in
-    1) install_rpms ;;
-    2) install_flatpaks ;;
-    3) break ;;
-    *) echo "Invalid option. Try again." ;;
-  esac
-done
+call_menu
