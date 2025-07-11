@@ -20,5 +20,6 @@ resolve_symlinks
 
 source $PROJECT_ROOT/lib/menu.sh
 source $PROJECT_ROOT/lib/rpms.sh
+source $PROJECT_ROOT/lib/flatpaks.sh
 
 call_menu
