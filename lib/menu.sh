@@ -8,7 +8,7 @@ call_menu() {
   select opt in "${options[@]}"
   do
     case $REPLY in
-      1) install_rpms ;;
+      1) install_packages ;;
       2) install_flatpaks ;;
       3) exit 0 ;;
       *) echo "Invalid option. Try again." ;;

@@ -5,17 +5,17 @@ source $PROJECT_ROOT/lib/strings.sh
 source $PROJECT_ROOT/lib/validation.sh
 
 install_flatpaks() {
-  check_packages
+  check_sources_file
   check_jq
 
   echo "📜 List of Flatpak apps:"
-  jq -r '.flatpak[] | "* \(.name) (\(.id))"' "$packages_file"
+  jq -r '.flatpaks[] | "* \(.name) (\(.id))"' "$APP_SOURCES"
   echo -e "$divider"
 
-  jq -c '.flatpak[]' $packages_file | while read -r app; do
+  jq -c '.flatpaks[]' $APP_SOURCES | while read -r app; do
     remote=$(echo "$app" | jq -r '.remote')
     id=$(echo "$app" | jq -r '.id')
-    
+
     flatpak install --system "$remote" "$id"
   done
 

@@ -2,9 +2,9 @@
 
 source $PROJECT_ROOT/lib/strings.sh
 
-check_packages() {
-  if [[ ! -f "$packages_file" ]]; then
-    echo >&2 "🌹 '$packages_file': file not found."
+check_sources_file() {
+  if [[ ! -f "$APP_SOURCES" ]]; then
+    echo >&2 "🌹 '$APP_SOURCES': file not found."
     echo -e "$cancellation"
     exit 1
   fi

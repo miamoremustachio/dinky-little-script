@@ -4,17 +4,17 @@ source $PROJECT_ROOT/lib/menu.sh
 source $PROJECT_ROOT/lib/strings.sh
 source $PROJECT_ROOT/lib/validation.sh
 
-install_rpms() {
-  check_packages
+install_packages() {
+  check_sources_file
   check_jq
 
-  packages=($(jq -r '.rpm[]' $packages_file))
+  packages=($(jq -r '.packages[]' $APP_SOURCES))
 
   echo "📜 List of packages:"
   printf ' * %s\n' "${packages[@]}"
   echo -e "$divider"
 
-  sudo dnf install "${packages[@]}"
+  sudo $PKG_INSTALL "${packages[@]}"
 
   repeat_question
 }

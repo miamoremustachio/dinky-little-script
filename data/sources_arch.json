@@ -1,5 +1,5 @@
 {
-	"rpm": [
+	"packages": [
 		"dconf-editor",
 		"git",
 		"gnome-themes-extra",
@@ -10,10 +10,8 @@
 		"vlc",
 		"vlc-plugins-extra"
 	],
-	"flatpak": [
-		{ "remote": "fedora", "name": "Flatseal", "id": "com.github.tchx84.Flatseal" },
+	"flatpaks": [
 		{ "remote": "flathub", "name": "Extension Manager", "id": "com.mattjakeman.ExtensionManager" },
-		{ "remote": "fedora", "name": "Okular", "id": "org.kde.okular" },
 		{ "remote": "flathub", "name": "Telegram", "id": "org.telegram.desktop" }
 	]
 }

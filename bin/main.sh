@@ -18,8 +18,12 @@ resolve_symlinks() {
 
 resolve_symlinks
 
+source $PROJECT_ROOT/lib/os_checker.sh
+
+detect_distro
+
 source $PROJECT_ROOT/lib/menu.sh
-source $PROJECT_ROOT/lib/rpms.sh
+source $PROJECT_ROOT/lib/packages.sh
 source $PROJECT_ROOT/lib/flatpaks.sh
 
 call_menu
