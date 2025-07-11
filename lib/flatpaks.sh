@@ -6,6 +6,7 @@ source $PROJECT_ROOT/lib/validation.sh
 
 install_flatpaks() {
   check_sources_file
+  check_flatpak
   check_jq
 
   echo "📜 List of Flatpak apps:"
