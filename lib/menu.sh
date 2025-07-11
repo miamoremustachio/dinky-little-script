@@ -10,7 +10,7 @@ call_menu() {
     case $REPLY in
       1) install_rpms ;;
       2) install_flatpaks ;;
-      3) break ;;
+      3) exit 0 ;;
       *) echo "Invalid option. Try again." ;;
     esac
   done
