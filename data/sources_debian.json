@@ -11,7 +11,7 @@
 		"vlc-plugins-extra"
 	],
 	"flatpaks": [
-		{ "remote": "flathub", "name": "Add Water", "id": "dev.qwery.AddWater" },
+    { "remote": "flathub", "name": "Add Water", "id": "dev.qwery.AddWater" },
     { "remote": "flathub", "name": "Flatseal", "id": "com.github.tchx84.Flatseal" },
     { "remote": "flathub", "name": "Obsidian", "id": "md.obsidian.Obsidian" },
 		{ "remote": "flathub", "name": "Telegram", "id": "org.telegram.desktop" }
